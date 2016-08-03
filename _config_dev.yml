@@ -1,7 +1,0 @@
-name: Goodbye F19 | Jekyll powered!
-highlighter: rouge 
-source: "app"
-destination: "dist"
-exclude: ["img", "css", "assets/sass", "js", "node_modules", "gulpfile.js", "package.json", "assets/js/*.js", "!assets/js/scripts.js"]
-keep_files: ["img", "css", "js"]
-baseurl: ""
