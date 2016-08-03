@@ -10,16 +10,13 @@ var uglify      = require('gulp-uglify');
 var deploy      = require('gulp-gh-pages');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
 
 
 // Build the Jekyll Site
 //
 gulp.task('jekyll-build', function (done) {
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn(jekyll, ['build'], { stdio: 'inherit' })
+    browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
+    return cp.spawn(jekyll, ['build', '--config=_config.yml,_config_dev.yml'], { stdio: 'inherit' })
         .on('close', done);
 });
 
