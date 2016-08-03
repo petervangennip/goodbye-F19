@@ -1,0 +1,10 @@
+﻿@import "../partials/variables.scss";
+@import "../partials/mixins.scss";
+
+.intro-text {
+    margin: 30px 0;
+
+    p {
+        text-align: center;
+    }
+}

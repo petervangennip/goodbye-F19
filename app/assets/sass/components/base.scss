@@ -1,0 +1,164 @@
+﻿@import "../partials/variables.scss";
+@import "../partials/mixins.scss";
+
+/*
+ *
+ * @project			Wedding site
+ * @authore		    Peter van gennip
+ *
+ */
+
+// =================================
+//   Toolbox 
+// ================================= 
+
+.clearfix {
+
+    &:before,
+    &:after {
+	    content: " ";
+	    display: table; 
+    }
+
+	&:after {
+		clear: both;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+
+// =================================
+//   Links 
+// ================================= 
+
+a {
+	color: $link-color;
+
+	&:link {
+		text-decoration: underline;
+		outline: 0;
+	}
+
+	&:visited {
+		text-decoration: underline;
+		outline: 0;
+	}
+
+	&:active {
+		text-decoration: underline;
+		outline: 0;
+	}
+
+	&:hover {
+        color: $link-color-hover;
+		text-decoration: none;
+		outline: 0;
+	}
+
+    &:focus,
+    &:active:focus,
+    &:visited:focus,
+    &:link:focus {
+        outline: hidden;
+    }
+}
+
+// =================================
+//   Base CSS 
+// =================================
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+} 
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+body {
+    font-family: $font-family-base;
+    color: $text-color;
+    background: $body-bg;
+    @include font-size(13);
+}
+
+
+
+// =================================
+//   Typography 
+// ================================= 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: $montserrat, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    @include font-size(34);
+}
+
+p {
+    @include font-size(15);
+    line-height: 1.6;
+}
+
+a.icon--linkedin,
+a.icon--linkedin:focus {
+    background: $color3;
+    text-decoration: none;
+    padding: 0 5px;
+    border-bottom: solid 2px $color1;
+    @include font-size(13);
+    transition: 0.1s all ease;
+
+    &:hover {
+        background: $color1;
+        border-bottom: solid 2px $color3;
+        color: $color3;
+    }
+
+    &:before {
+        content:'\f08c';
+        display: inline-block;
+        font-family: fontawesome;
+        margin-right: 5px;
+    }
+}
+
+
+
+
+
+
+
+

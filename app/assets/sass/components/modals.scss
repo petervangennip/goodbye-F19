@@ -1,0 +1,148 @@
+﻿@import "../partials/variables.scss";
+@import "../partials/mixins.scss";
+
+.portfolio-modal {
+
+    .modal-content {
+        padding: 100px 0;
+        min-height: 100%;
+        border: 0;
+        border-radius: 0;
+        text-align: center;
+        background-clip: border-box;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.8);
+
+        h2 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        img {
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.55); 
+            }
+        }
+
+        .item-details {
+            margin: 30px 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+
+                strong {
+                    display: block;
+                    font-family: $montserrat;
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .modal-body {
+            background: $color3;
+            position: relative;
+            box-shadow: 0 12px 5px -7px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 75px;
+        height: 75px;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .3;
+        }
+
+        .lr {
+            z-index: 1051;
+            width: 1px;
+            height: 75px;
+            margin-left: 35px;
+            background-color: #000;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+            .rl {
+                z-index: 1052;
+                width: 1px;
+                height: 75px;
+                background-color: #000;
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+
+        }
+    }
+}
+
+/* Fix modal mouse wheel issues */
+.modal.fade.in {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+//
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.img-animation-scale {
+    animation: scale ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.img-animation-spin {
+    animation: spin ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+}
+
+$class-slug: img-animation-scale !default
+$selector: nth-child !default
+$dot: '0.' !default
+
+@for $i from 1 through 20 {
+    $incr: $i + 99;
+    .test div:#{$selector}(#{$i}) .#{$class-slug} {
+        animation-delay: #{$dot}#{$i}s;
+    }
+}
+
+
+
+
+
+
+
+

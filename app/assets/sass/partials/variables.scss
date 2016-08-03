@@ -1,0 +1,43 @@
+﻿// =================================
+//   Color settings 
+// ================================= 
+$color1: #000; 
+$color2: #FFF; 
+$color3: #f9ce4e;
+$color4: #f9f9f9;
+
+
+// =================================
+//   Background setting
+// ================================= 
+$body-bg:                   $color2; // $color2 url(/images/imagename.ext) 0 0 repeat;
+
+// =================================
+//   Text colors  & shadows
+// ================================= 
+$text-color:                $color1;
+$link-color:                $color1;
+$link-color-hover:          lighten($link-color, 25%);
+
+// =================================
+//   Typography settings
+// ================================= 
+$font-family-base:          "Open Sans", Helvetica, Arial, sans-serif;
+$montserrat:                Montserrat;
+
+// =================================
+//   Breakpoint settings
+// ================================= 
+$screen-xs-min:              480px;  // Extra small screen / phone
+$screen-sm-min:              768px;  // Small screen       / tablet
+$screen-md-min:              992px;  // Medium screen      / desktop
+$screen-lg-min:              1200px; // Large screen       / large desktop
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+
+
+

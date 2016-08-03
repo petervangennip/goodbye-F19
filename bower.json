@@ -1,0 +1,18 @@
+{
+  "name": "goodbye F19",
+  "description": "Goodbye F19",
+  "main": "gulpfile.js",
+  "authors": [
+    "Peter van Gennip"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pwavg/pwavg.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

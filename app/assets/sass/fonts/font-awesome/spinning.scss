@@ -1,0 +1,32 @@
+// Spinning Icons
+// --------------------------
+
+.#{$fa-css-prefix}-adjust-hue {
+  -webkit-animation: adjust-hue 2s infinite linear;
+  -moz-animation: adjust-hue 2s infinite linear;
+  -o-animation: adjust-hue 2s infinite linear;
+  animation: adjust-hue 2s infinite linear;
+}
+
+@-moz-keyframes adjust-hue {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes adjust-hue {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes adjust-hue {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@keyframes adjust-hue {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
